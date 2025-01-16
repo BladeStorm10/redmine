@@ -1,0 +1,8 @@
+<h2>Repositories for <%= @project.name %></h2>
+<ul>
+  <% @repositories.each do |repository| %>
+    <li>
+      <%= link_to repository.name, project_repository_path(@project, repository) %>
+    </li>
+  <% end %>
+</ul>

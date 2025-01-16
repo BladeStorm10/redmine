@@ -1,0 +1,8 @@
+<h2>Repository: <%= @repository.name %></h2>
+<ul>
+  <% @entries.each do |entry| %>
+    <li>
+      <%= link_to entry.path, raw_repository_path(@repository, entry.path) %>
+    </li>
+  <% end %>
+</ul>
